@@ -1,0 +1,32 @@
+﻿<!-- this is sample data to see how it looks on the xaml layout, it is not loaded to the app -->
+<local:MainViewModel 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"       
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:CineQuest" 
+    SampleProperty="Sample Text Property Value">
+    
+    <local:MainViewModel.Items>
+        <!-- each item here has to match instance fields from the ItemViewModel and is only displayed
+             on the layout if the layout uses the associated instance field -->
+        <local:ItemViewModel
+            IVMid="0000"
+            IVMtitle="Movie #1" 
+            IVMdescription="#1 description"
+            IVMtagline="#1 tagline"
+            IVMgenre="#1 genre"
+            IVMimageURL="#1 imageURL"
+            IVMdirector="#1 director"
+            IVMproducer="#1 producer"
+            IVMcinematographer="#1 cinematographer"
+            IVMeditor="#1 editor"
+            IVMcast="#1 cast"
+            IVMcountry="#1 country"
+            IVMlanguage="#1 language"
+            IVMfilminfo="#1 film info"
+            IVMshowtimes="#1 showtimes" />
+        <local:ItemViewModel IVMtitle="Movie #2" />
+        <local:ItemViewModel IVMtitle="Movie #3" />
+        <local:ItemViewModel IVMtitle="Movie #4" />
+    </local:MainViewModel.Items>
+    
+</local:MainViewModel>

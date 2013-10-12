@@ -1,0 +1,27 @@
+c:\users\spencer\documents\visual studio 2010\Projects\XMLTest\XMLTest\obj\Debug\ResolveAssemblyReference.cache
+c:\users\spencer\documents\visual studio 2010\Projects\XMLTest\XMLTest\obj\Debug\App.g.i.cs
+c:\users\spencer\documents\visual studio 2010\Projects\XMLTest\XMLTest\obj\Debug\MainPage.g.i.cs
+c:\users\spencer\documents\visual studio 2010\Projects\XMLTest\XMLTest\obj\Debug\XMLTest.g.resources
+c:\users\spencer\documents\visual studio 2010\Projects\XMLTest\XMLTest\Bin\Debug\ApplicationIcon.png
+c:\users\spencer\documents\visual studio 2010\Projects\XMLTest\XMLTest\Bin\Debug\Background.png
+c:\users\spencer\documents\visual studio 2010\Projects\XMLTest\XMLTest\Bin\Debug\XMLTest.dll
+c:\users\spencer\documents\visual studio 2010\Projects\XMLTest\XMLTest\Bin\Debug\XMLTest.pdb
+c:\users\spencer\documents\visual studio 2010\Projects\XMLTest\XMLTest\Bin\Debug\AppManifest.xaml
+c:\users\spencer\documents\visual studio 2010\Projects\XMLTest\XMLTest\Bin\Debug\XMLTest.xap
+c:\users\spencer\documents\visual studio 2010\Projects\XMLTest\XMLTest\obj\Debug\XMLTest.dll
+c:\users\spencer\documents\visual studio 2010\Projects\XMLTest\XMLTest\obj\Debug\XMLTest.pdb
+c:\users\spencer\documents\visual studio 2010\Projects\XMLTest\XMLTest\obj\Debug\XapCacheFile.xml
+C:\Users\Spencer\Documents\testpull\WPhone\XMLTest\XMLTest\Bin\Debug\ApplicationIcon.png
+C:\Users\Spencer\Documents\testpull\WPhone\XMLTest\XMLTest\Bin\Debug\Background.png
+C:\Users\Spencer\Documents\testpull\WPhone\XMLTest\XMLTest\Bin\Debug\XMLTest.dll
+C:\Users\Spencer\Documents\testpull\WPhone\XMLTest\XMLTest\Bin\Debug\XMLTest.pdb
+C:\Users\Spencer\Documents\testpull\WPhone\XMLTest\XMLTest\Bin\Debug\AppManifest.xaml
+C:\Users\Spencer\Documents\testpull\WPhone\XMLTest\XMLTest\Bin\Debug\XMLTest.xap
+C:\Users\Spencer\Documents\testpull\WPhone\XMLTest\XMLTest\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Spencer\Documents\testpull\WPhone\XMLTest\XMLTest\obj\Debug\App.g.i.cs
+C:\Users\Spencer\Documents\testpull\WPhone\XMLTest\XMLTest\obj\Debug\AnswerPage.g.i.cs
+C:\Users\Spencer\Documents\testpull\WPhone\XMLTest\XMLTest\obj\Debug\MainPage.g.i.cs
+C:\Users\Spencer\Documents\testpull\WPhone\XMLTest\XMLTest\obj\Debug\XMLTest.g.resources
+C:\Users\Spencer\Documents\testpull\WPhone\XMLTest\XMLTest\obj\Debug\XMLTest.dll
+C:\Users\Spencer\Documents\testpull\WPhone\XMLTest\XMLTest\obj\Debug\XMLTest.pdb
+C:\Users\Spencer\Documents\testpull\WPhone\XMLTest\XMLTest\obj\Debug\XapCacheFile.xml

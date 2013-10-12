@@ -1,0 +1,35 @@
+Hey guys so I made what i believe are the required classes for the film page. I am not sure how you are connecting the data to the ui, your way looks way more sophisticated than the way i was doing it. let me know how they work.
+So to actually make the internet connection you need
+
+//put this in the constructor of the film page if that is going to be the first page
+this.Loaded += new RoutedEventHandler(FilmMainPage_Loaded);
+
+//then put this in the loaded method
+WebClient webclient = new WebClient();
+            webclient.DownloadStringCompleted += new DownloadStringCompletedEventHandler(webclient_DownloadStringCompleted);
+            webclient.DownloadStringAsync(new Uri("http://mobile.cinequest.org/mobileCQ.php?type=festival"))
+
+
+//then you will need this method
+
+ void webclient_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                MessageBox.Show("error");
+            }
+            Festival festival = null;
+            XmlSerializer serializer = new XmlSerializer(typeof(Festival));
+            XmlReader reader = XmlReader.Create(e.Result);
+            festival = (Festival)serializer.Deserialize(reader);
+            reader.Close();
+           /* FilmItemList list = new FilmItemList(festival);
+            list.populateList();
+            foreach (FilmItem item in list.Itemlist)
+            {
+                MainListBox.Items.Add(item);
+            }*/
+        }
+//so this will created the festival object that should be populated with everything needed for the film page
+
+let me know how if i need to make changes. If everything works out well il do the same thing for the rest of pages
