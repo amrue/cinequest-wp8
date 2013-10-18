@@ -17,66 +17,150 @@
 
     <!--Data context is set to sample data above and LayoutRoot contains the root grid where all other page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
 
-        <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="ApplicationTitle" Text="Cinequest" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="Films" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
-        </StackPanel>
+        <!-- LOCALIZATION NOTE:
+            To localize the displayed strings copy their values to appropriately named
+            keys in the app's neutral language resource file (AppResources.resx) then
+            replace the hard-coded text value between the attributes' quotation marks
+            with the binding clause whose path points to that string name.
 
-        <!--ContentPanel contains ListBox and ListBox ItemTemplate. Place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <ListBox
-                x:Name="MainListBox"
-                Margin="0,0,-12,0"
-                ItemsSource="{Binding Items}"
-                SelectionChanged="MainListBox_SelectionChanged"
-                >
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Margin="0,0,0,17" Width="432" Height="Auto" Orientation="Horizontal">
-                            <StackPanel Margin="0,0,0,17" Width="432" Height="Auto" Orientation="Vertical">
-                                <TextBlock Text="{Binding IVMtitle}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+            For example:
+
+                Text="{Binding Path=LocalizedResources.ApplicationTitle, Source={StaticResource LocalizedStrings}}"
+
+            This binding points to the template's string resource named "ApplicationTitle".
+
+            Adding supported languages in the Project Properties tab will create a
+            new resx file per language that can carry the translated values of your
+            UI strings. The binding in these examples will cause the value of the
+            attributes to be drawn from the .resx file that matches the
+            CurrentUICulture of the app at run time.
+         -->
+
+        <!--Panorama control-->
+        <phone:Panorama Title="Cinequest 2013">
+            <phone:Panorama.Background>
+                <ImageBrush ImageSource="/CinePanorama;component/Assets/PanoramaBackground.png"/>
+            </phone:Panorama.Background>
+
+            <!--Panorama item one-->
+            <phone:PanoramaItem>
+                <!--Double line list with image placeholder and text wrapping using a floating header that scrolls with the content-->
+                <phone:LongListSelector Name="FilmList" SelectionChanged="FilmList_SelectionChanged" Margin="0,-38,-22,2" ItemsSource="{Binding Items}">
+                    <phone:LongListSelector.ListHeaderTemplate>
+                        <DataTemplate>
+                            <Grid Margin="12,0,0,38">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Text="Films"
+                                           Style="{StaticResource PanoramaItemHeaderTextStyle}"
+                                           Grid.Row="0"/>
+                            </Grid>
+                        </DataTemplate>
+                    </phone:LongListSelector.ListHeaderTemplate>
+                    <phone:LongListSelector.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Margin="12,2,0,4" Height="105" Width="432">
+                                <!--Replace rectangle with image-->
+                                <Border BorderThickness="1" Width="99" Height="99" BorderBrush="#FFFFC700" Background="#FFFFC700"/>
+                                <StackPanel Width="311" Margin="8,-7,0,0">
+                                    <TextBlock Text="{Binding IVMtitle}" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
+                                    <TextBlock Text="{Binding IVMdescription}" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />
+                                </StackPanel>
                             </StackPanel>
+                        </DataTemplate>
+                    </phone:LongListSelector.ItemTemplate>
+                </phone:LongListSelector>
+            </phone:PanoramaItem>
+            <!--Single line list with text wrapping
+                <phone:LongListSelector Margin="0,0,-22,0" ItemsSource="{Binding Items}">
+                    <phone:LongListSelector.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="0,-6,0,12">
+                                <TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeExtraLarge}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </phone:LongListSelector.ItemTemplate>
+                </phone:LongListSelector>
+            </phone:PanoramaItem>
+                end of original item 1-->
+
+
+            <!--Panorama item two-->
+            <phone:PanoramaItem>
+                <!--Double line list with image placeholder and text wrapping using a floating header that scrolls with the content-->
+                <phone:LongListSelector Margin="0,-38,-22,2" ItemsSource="{Binding Items}">
+                    <phone:LongListSelector.ListHeaderTemplate>
+                        <DataTemplate>
+                            <Grid Margin="12,0,0,38">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Text="Events"
+                                           Style="{StaticResource PanoramaItemHeaderTextStyle}"
+                                           Grid.Row="0"/>
+                            </Grid>
+                        </DataTemplate>
+                    </phone:LongListSelector.ListHeaderTemplate>
+                    <phone:LongListSelector.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Margin="12,2,0,4" Height="105" Width="432">
+                                <!--Replace rectangle with image-->
+                                <Border BorderThickness="1" Width="99" Height="99" BorderBrush="#FFFFC700" Background="#FFFFC700"/>
+                                <StackPanel Width="311" Margin="8,-7,0,0">
+                                    <TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
+                                    <TextBlock Text="{Binding LineTwo}" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </phone:LongListSelector.ItemTemplate>
+                </phone:LongListSelector>
+            </phone:PanoramaItem>
+
+            <!--Panorama item three-->
+            <phone:PanoramaItem Header="Forum" Orientation="Horizontal">
+                <!--Double wide Panorama with large image placeholders-->
+                <!-- old stuff for the grid display
+                <Grid>
+                    <StackPanel Margin="0,4,16,0" Orientation="Vertical" VerticalAlignment="Top">
+                        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                            <Border Background="#FFFFC700" Height="173" Width="173" Margin="12,0,0,0"/>
+                            <Border Background="#FFFFC700" Height="173" Width="173" Margin="12,0,0,0"/>
+                            <Border Background="#FFFFC700" Height="173" Width="173" Margin="12,0,0,0"/>
+                            <Border Background="#FFFFC700" Height="173" Width="173" Margin="12,0,0,0"/>
                         </StackPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-         </Grid>
+                        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="0,12,0,0">
+                            <Border Background="#FFFFC700" Height="173" Width="173" Margin="12,0,0,0"/>
+                            <Border Background="#FFFFC700" Height="173" Width="173" Margin="12,0,0,0"/>
+                            <Border Background="#FFFFC700" Height="173" Width="173" Margin="12,0,0,0"/>
+                            <Border Background="#FFFFC700" Height="173" Width="173" Margin="12,0,0,0"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+                -->
+                <phone:LongListSelector Margin="0,0,-22,0" ItemsSource="{Binding Items}">
+                    <phone:LongListSelector.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="0,-6,0,12">
+                                <TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeExtraLarge}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </phone:LongListSelector.ItemTemplate>
+                </phone:LongListSelector>
+            </phone:PanoramaItem>
+        </phone:Panorama>
+
+        <!--Uncomment to see an alignment grid to help ensure your controls are
+            aligned on common boundaries.  The image has a top margin of -32px to
+            account for the System Tray. Set this to 0 (or remove the margin altogether)
+            if the System Tray is hidden.
+
+            Before shipping remove this XAML and the image itself.-->
+        <!--<Image Source="/Assets/AlignmentGrid.png" VerticalAlignment="Top" Height="800" Width="480" Margin="0" Grid.Row="0" Grid.RowSpan="2" IsHitTestVisible="False" />-->
+
     </Grid>
- 
-    <!--Sample code showing usage of ApplicationBar-->
-    <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" Opacity="1.0">
-            <shell:ApplicationBarIconButton
-                x:Name="eventsButton"
-                IconUri="/Images/Icons/icon_events_small.png"
-                Text="Events"
-                Click="eventsButton_Click" />
-            <shell:ApplicationBarIconButton
-                x:Name="forumsButton"
-                IconUri="/Images/Icons/icon_forums_small.png"
-                Text="Forums"
-                Click="forumsButton_Click" />
-            <shell:ApplicationBarIconButton
-                x:Name="dvdsButton"
-                IconUri="/Images/Icons/icon_dvds_small.png"
-                Text="DVDs"
-                Click="dvdsButton_Click" />
-            <shell:ApplicationBarIconButton
-                x:Name="scheduleButton"
-                IconUri="/Images/Icons/icon_schedule_small.png"
-                Text="Schedule"
-                Click="scheduleButton_Click" />
-            <!--<shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
-                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
-            </shell:ApplicationBar.MenuItems>-->
-        </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>
 
 </phone:PhoneApplicationPage>

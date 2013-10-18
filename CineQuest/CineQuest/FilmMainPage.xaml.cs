@@ -62,17 +62,18 @@ namespace CineQuest
         }
 
         /* Handle selection changed on ListBox */
-        private void MainListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void FilmList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            //I changed selected index to selectedItem and now it seems navigation to filmslistpage does not work
             /* If selected index is -1 (no selection) do nothing */
-            if (MainListBox.SelectedIndex == -1)
+            if (FilmList.SelectedItem == null)
                 return;
 
             /* Navigate to the new page */
-            NavigationService.Navigate(new Uri("/FilmDetailsPage.xaml?selectedItem=" + MainListBox.SelectedIndex, UriKind.Relative));
+            NavigationService.Navigate(new Uri("/FilmDetailsPage.xaml?selectedItem=" + FilmList.SelectedItem, UriKind.Relative));
 
             /* Reset selected index to -1 (no selection) */
-            MainListBox.SelectedIndex = -1;
+            FilmList.SelectedItem = null;
         }
         
         /* Load data for the ViewModel Items */

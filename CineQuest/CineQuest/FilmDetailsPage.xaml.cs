@@ -28,7 +28,9 @@ namespace CineQuest
             string selectedIndex = "";
             if (NavigationContext.QueryString.TryGetValue("selectedItem", out selectedIndex))
             {
-                int index = int.Parse(selectedIndex);
+                int index = 0; //setting to 0 just to test if it works...
+                //need to find out how to obtain selected Index from panorama
+                //int index = int.Parse(selectedIndex);
                 DataContext = App.ViewModel.Items[index];
             }
         }

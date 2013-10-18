@@ -23,7 +23,8 @@
             IVMcountry="#1 country"
             IVMlanguage="#1 language"
             IVMfilminfo="#1 film info"
-            IVMshowtimes="#1 showtimes" />
+            IVMshowtimes="#1 showtimes" 
+            />
         <local:ItemViewModel IVMtitle="Movie #2" />
         <local:ItemViewModel IVMtitle="Movie #3" />
         <local:ItemViewModel IVMtitle="Movie #4" />
