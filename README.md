@@ -1,4 +1,4 @@
-CiniquestWP8
+CinequestWP8
 ============
 
 Ciniquest app by Windows Phone 8 team, CS 175, inhereted from last semester's group. Several things are being fixed/added this semester. Tasks are assigned/delegated in the "Group Tasks" wiki.
