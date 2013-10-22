@@ -6,7 +6,8 @@
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Controls="clr-namespace:Facebook.Client.Controls;assembly=Facebook.Client"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="696" 
     d:DataContext="{d:DesignData SampleData/MainViewModelSampleData.xaml}"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
@@ -151,6 +152,32 @@
                     </phone:LongListSelector.ItemTemplate>
                 </phone:LongListSelector>
             </phone:PanoramaItem>
+
+            <!--Panorama item four (facebook login)-->
+            <phone:PanoramaItem Header="Facebook!" Orientation="Horizontal">
+                <Grid>
+                    <Controls:LoginButton
+                        x:Name="loginButton"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Center" ApplicationId="573921189342073" SessionStateChanged="OnSessionStateChanged"/>
+
+                    <TextBlock 
+                        x:Name="welcomeMessage"
+                        Visibility="Visible"
+                        FontSize="32"
+                        HorizontalAlignment="Left" 
+                        VerticalAlignment="Center" 
+                        Text="welcome!" 
+                        Margin="140,174,0,234"/>
+
+
+
+
+                </Grid>
+
+            </phone:PanoramaItem>
+
+
         </phone:Panorama>
 
         <!--Uncomment to see an alignment grid to help ensure your controls are

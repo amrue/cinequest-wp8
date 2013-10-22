@@ -85,5 +85,14 @@ namespace CineQuest
             }
 
         }
+
+        private void OnSessionStateChanged(object sender, Facebook.Client.Controls.SessionStateChangedEventArgs e)
+        {
+            if (e.SessionState == Facebook.Client.Controls.FacebookSessionState.Opened)
+            {
+                this.welcomeMessage.Visibility = (e.SessionState == Facebook.Client.Controls.FacebookSessionState.Opened) ?
+                    Visibility.Visible : Visibility.Collapsed;
+            }
+        }
     }
 }
