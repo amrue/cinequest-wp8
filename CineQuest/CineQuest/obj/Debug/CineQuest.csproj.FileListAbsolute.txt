@@ -166,3 +166,16 @@ E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\obj\Debug\CineQuest.g.res
 E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\obj\Debug\CineQuest.dll
 E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\obj\Debug\CineQuest.pdb
 E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\obj\Debug\XapCacheFile.xml
+C:\Users\Steven\Documents\GitHub\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\Microsoft.Phone.Controls.dll
+C:\Users\Steven\Documents\GitHub\ciniquest-wp8\CineQuest\CineQuest\obj\Debug\CineQuest.csprojResolveAssemblyReference.cache
+C:\Users\Steven\Documents\GitHub\ciniquest-wp8\CineQuest\CineQuest\obj\Debug\FilmDetailsPanorama.g.cs
+C:\Users\Steven\Documents\GitHub\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\Facebook.Client.dll
+C:\Users\Steven\Documents\GitHub\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\Facebook.dll
+C:\Users\Steven\Documents\GitHub\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\Microsoft.Threading.Tasks.dll
+C:\Users\Steven\Documents\GitHub\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\Steven\Documents\GitHub\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\Microsoft.Threading.Tasks.Extensions.Phone.dll
+C:\Users\Steven\Documents\GitHub\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\Facebook.xml
+C:\Users\Steven\Documents\GitHub\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\Facebook.Client.xml
+C:\Users\Steven\Documents\GitHub\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\Microsoft.Threading.Tasks.xml
+C:\Users\Steven\Documents\GitHub\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\Steven\Documents\GitHub\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\Microsoft.Threading.Tasks.Extensions.Phone.xml
