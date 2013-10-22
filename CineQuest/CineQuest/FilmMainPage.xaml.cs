@@ -70,7 +70,7 @@ namespace CineQuest
                 return;
 
             /* Navigate to the new page */
-            NavigationService.Navigate(new Uri("/FilmDetailsPage.xaml?selectedItem=" + FilmList.SelectedItem, UriKind.Relative));
+            NavigationService.Navigate(new Uri("/FilmDetailsPanorama.xaml?selectedItem=" + FilmList.SelectedItem, UriKind.Relative));
 
             /* Reset selected index to -1 (no selection) */
             FilmList.SelectedItem = null;

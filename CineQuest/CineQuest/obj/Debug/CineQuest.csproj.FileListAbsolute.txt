@@ -79,3 +79,90 @@ C:\Users\Steven\Documents\GitHub\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\App
 C:\Users\Steven\Documents\GitHub\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\Properties\WMAppManifest.xml
 C:\Users\Steven\Documents\GitHub\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\CineQuest_Debug_AnyCPU.xap
 C:\Users\Steven\Documents\GitHub\ciniquest-wp8\CineQuest\CineQuest\obj\Debug\XapCacheFile.xml
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\ApplicationIcon.png
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\Images\Icons\icon_dvds_small.png
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\Images\Icons\icon_events_small.png
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\Images\Icons\icon_films_small.png
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\Images\Icons\icon_forums_small.png
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\Images\Icons\Application_TileImage_173x173.png
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\Images\Icons\Marketplace_Device_173x173.png
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\Images\Icons\Marketplace_Device_62x62.png
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\Images\Icons\Marketplace_Device_99x99.png
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\Images\Icons\icon_schedule_small.png
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\Background.png
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\CineQuest.dll
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\CineQuest.pdb
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\obj\Debug\App.g.cs
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\obj\Debug\DVDMainPage.g.cs
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\obj\Debug\EventsMainPage.g.cs
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\obj\Debug\FilmDetailsPage.g.cs
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\obj\Debug\FilmMainPage.g.cs
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\obj\Debug\ForumsMainPage.g.cs
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\obj\Debug\ScheduleMainPage.g.cs
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\obj\Debug\CineQuest.g.resources
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\obj\Debug\CineQuest.dll
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\obj\Debug\CineQuest.pdb
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\AppManifest.xaml
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\CineQuest_Debug_AnyCPU.xap
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\obj\Debug\XapCacheFile.xml
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\Microsoft.Phone.Controls.dll
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\obj\Debug\CineQuest.csprojResolveAssemblyReference.cache
+D:\mobile prog\ciniquest-wp8-master\CineQuest\CineQuest\obj\Debug\FilmDetailsPanorama.g.cs
+E:\project\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\ApplicationIcon.png
+E:\project\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\Images\Icons\icon_dvds_small.png
+E:\project\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\Images\Icons\icon_events_small.png
+E:\project\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\Images\Icons\icon_films_small.png
+E:\project\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\Images\Icons\icon_forums_small.png
+E:\project\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\Images\Icons\Application_TileImage_173x173.png
+E:\project\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\Images\Icons\Marketplace_Device_173x173.png
+E:\project\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\Images\Icons\Marketplace_Device_62x62.png
+E:\project\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\Images\Icons\Marketplace_Device_99x99.png
+E:\project\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\Images\Icons\icon_schedule_small.png
+E:\project\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\Background.png
+E:\project\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\CineQuest.dll
+E:\project\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\CineQuest.pdb
+E:\project\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\AppManifest.xaml
+E:\project\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\CineQuest_Debug_AnyCPU.xap
+E:\project\ciniquest-wp8-master\CineQuest\CineQuest\Bin\Debug\Microsoft.Phone.Controls.dll
+E:\project\ciniquest-wp8-master\CineQuest\CineQuest\obj\Debug\App.g.cs
+E:\project\ciniquest-wp8-master\CineQuest\CineQuest\obj\Debug\DVDMainPage.g.cs
+E:\project\ciniquest-wp8-master\CineQuest\CineQuest\obj\Debug\EventsMainPage.g.cs
+E:\project\ciniquest-wp8-master\CineQuest\CineQuest\obj\Debug\FilmDetailsPage.g.cs
+E:\project\ciniquest-wp8-master\CineQuest\CineQuest\obj\Debug\FilmMainPage.g.cs
+E:\project\ciniquest-wp8-master\CineQuest\CineQuest\obj\Debug\ForumsMainPage.g.cs
+E:\project\ciniquest-wp8-master\CineQuest\CineQuest\obj\Debug\FilmDetailsPanorama.g.cs
+E:\project\ciniquest-wp8-master\CineQuest\CineQuest\obj\Debug\ScheduleMainPage.g.cs
+E:\project\ciniquest-wp8-master\CineQuest\CineQuest\obj\Debug\CineQuest.g.resources
+E:\project\ciniquest-wp8-master\CineQuest\CineQuest\obj\Debug\CineQuest.dll
+E:\project\ciniquest-wp8-master\CineQuest\CineQuest\obj\Debug\CineQuest.pdb
+E:\project\ciniquest-wp8-master\CineQuest\CineQuest\obj\Debug\XapCacheFile.xml
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\ApplicationIcon.png
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\Images\Icons\icon_dvds_small.png
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\Images\Icons\icon_events_small.png
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\Images\Icons\icon_films_small.png
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\Images\Icons\icon_forums_small.png
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\Images\Icons\Application_TileImage_173x173.png
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\Images\Icons\Marketplace_Device_173x173.png
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\Images\Icons\Marketplace_Device_62x62.png
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\Images\Icons\Marketplace_Device_99x99.png
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\Images\Icons\icon_schedule_small.png
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\Background.png
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\CineQuest.dll
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\CineQuest.pdb
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\AppManifest.xaml
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\Properties\WMAppManifest.xml
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\CineQuest_Debug_AnyCPU.xap
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\Bin\Debug\Microsoft.Phone.Controls.dll
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\obj\Debug\CineQuest.csprojResolveAssemblyReference.cache
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\obj\Debug\App.g.cs
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\obj\Debug\DVDMainPage.g.cs
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\obj\Debug\EventsMainPage.g.cs
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\obj\Debug\FilmDetailsPage.g.cs
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\obj\Debug\FilmMainPage.g.cs
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\obj\Debug\ForumsMainPage.g.cs
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\obj\Debug\FilmDetailsPanorama.g.cs
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\obj\Debug\ScheduleMainPage.g.cs
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\obj\Debug\CineQuest.g.resources
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\obj\Debug\CineQuest.dll
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\obj\Debug\CineQuest.pdb
+E:\project\winMobile\ciniquest-wp8\CineQuest\CineQuest\obj\Debug\XapCacheFile.xml
