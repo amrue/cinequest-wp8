@@ -1,4 +1,4 @@
-﻿/** Code for the UI layout of the main film page. Lists alphabetically and clicking on a film opens
+﻿    /** Code for the UI layout of the main film page. Lists alphabetically and clicking on a film opens
  * the film detail page. No class manipulation is done here, just linking classes to UI elements.
  */
 
@@ -88,11 +88,58 @@ namespace CineQuest
 
         private void OnSessionStateChanged(object sender, Facebook.Client.Controls.SessionStateChangedEventArgs e)
         {
+
             if (e.SessionState == Facebook.Client.Controls.FacebookSessionState.Opened)
             {
-                this.welcomeMessage.Visibility = (e.SessionState == Facebook.Client.Controls.FacebookSessionState.Opened) ?
-                    Visibility.Visible : Visibility.Collapsed;
+                this.welcomeMessage.Visibility = Visibility.Visible;
+                this.shareButton.Visibility = Visibility.Visible;
             }
+
+            else if (e.SessionState == Facebook.Client.Controls.FacebookSessionState.Closed) {
+                this.welcomeMessage.Visibility = Visibility.Collapsed;
+                this.shareButton.Visibility = Visibility.Collapsed;
+
+                   
+            }
+        }
+
+        private async void PublishStory() {
+            await this.loginButton.RequestNewPermissions("publish_stream");
+
+            var facebookClient = new Facebook.FacebookClient(this.loginButton.CurrentSession.AccessToken);
+
+            var postParams = new
+
+            {
+                name = "Facebook SDK for .NET",
+                caption = "Build great social apps and get more installs.",
+                description = "The Facebook SDK for .NET makes it easier and faster to develop Facebook integrated .NET apps.",
+                link = "http://facebooksdk.net/",
+                picture = "http://facebooksdk.net/assets/img/logo75x75.png" 
+            };
+
+            try
+            {
+                dynamic fbPostTaskResult = await facebookClient.PostTaskAsync("/me/feed", postParams);
+                var result = (IDictionary<string, object>)fbPostTaskResult;
+
+                Dispatcher.BeginInvoke(() =>
+                {
+                    MessageBox.Show("Posted Open Graph Action, id: " + (string)result["id"], "Result", MessageBoxButton.OK);
+                });
+            }
+            catch (Exception ex)
+            {
+                Dispatcher.BeginInvoke(() =>
+                {
+                    MessageBox.Show("Exception during post: " + ex.Message, "Error", MessageBoxButton.OK);
+                });
+            }
+
+        }
+
+        private void OnShareButtonClick(object sender, RoutedEventArgs e) {
+            this.PublishStory();
         }
     }
 }

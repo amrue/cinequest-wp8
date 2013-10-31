@@ -163,12 +163,25 @@
 
                     <TextBlock 
                         x:Name="welcomeMessage"
-                        Visibility="Visible"
+                        Visibility="Collapsed"
                         FontSize="32"
                         HorizontalAlignment="Left" 
                         VerticalAlignment="Center" 
-                        Text="welcome!" 
-                        Margin="140,174,0,234"/>
+                        Text="Logged in!" 
+                        Margin="140,72,0,336"/>
+                    
+                    <Button 
+                        Click="OnShareButtonClick"
+                        Visibility="Collapsed"
+                        x:Name="shareButton"
+                        Content="Share" 
+                        Width="250"
+                        HorizontalAlignment="Left" 
+                        Margin="86,143,0,0" 
+                        VerticalAlignment="Top"/>
+                    
+                    
+
 
 
 

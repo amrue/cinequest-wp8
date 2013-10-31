@@ -20,10 +20,12 @@ namespace CineQuest
         /* When page is navigated to set data context to selected item in list */
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            string selectedIndex = "";
+            string selectedIndex;
             if (NavigationContext.QueryString.TryGetValue("selectedItem", out selectedIndex))
             {
-                int index = 0;// int.Parse(selectedIndex); //for testing throws error need to look into it
+                int index = 0;
+                //int index = App.ViewModel.Items.IndexOf(selectedIndex as ItemViewModel);
+               // int index = Int32.Parse(selectedIndex);// int.Parse(selectedIndex); //for testing throws error need to look into it
                 DataContext = App.ViewModel.Items[index];
                 //System.Diagnostics.Debug.WriteLine("test"+DataContext);
 

@@ -25,10 +25,10 @@ namespace CineQuest
         /* When page is navigated to set data context to selected item in list */
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            string selectedIndex = "";
+            string selectedIndex="";
             if (NavigationContext.QueryString.TryGetValue("selectedItem", out selectedIndex))
             {
-                int index = 0; //setting to 0 just to test if it works...
+                int index = 2; //setting to 0 just to test if it works...
                 //need to find out how to obtain selected Index from panorama
                 //int index = int.Parse(selectedIndex);
                 DataContext = App.ViewModel.Items[index];
