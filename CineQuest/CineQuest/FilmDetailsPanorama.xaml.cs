@@ -21,13 +21,13 @@ namespace CineQuest
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             string selectedIndex;
-            if (NavigationContext.QueryString.TryGetValue("selectedItem", out selectedIndex))
+            if (NavigationContext.QueryString.TryGetValue("selectedIndex", out selectedIndex))
             {
-                int index = 0;
+
                 //int index = App.ViewModel.Items.IndexOf(selectedIndex as ItemViewModel);
                // int index = Int32.Parse(selectedIndex);// int.Parse(selectedIndex); //for testing throws error need to look into it
-                DataContext = App.ViewModel.Items[index];
-                //System.Diagnostics.Debug.WriteLine("test"+DataContext);
+                DataContext = App.ViewModel.Items[Int32.Parse(selectedIndex)];
+                System.Diagnostics.Debug.WriteLine("test "+selectedIndex);
 
             }
         }

@@ -66,14 +66,19 @@ namespace CineQuest
         {
             //I changed selected index to selectedItem and now it seems navigation to filmslistpage does not work
             /* If selected index is -1 (no selection) do nothing */
+            //e.AddedItems.IndexOf(FilmList.SelectedItem)
+
             if (FilmList.SelectedItem == null)
                 return;
 
+            int selectedIndex = FilmList.ItemsSource.IndexOf(FilmList.SelectedItem);
             /* Navigate to the new page */
-            NavigationService.Navigate(new Uri("/FilmDetailsPanorama.xaml?selectedItem=" + FilmList.SelectedItem, UriKind.Relative));
+            //NavigationService.Navigate(new Uri("/FilmDetailsPanorama.xaml?selectedItem=" + FilmList.SelectedItem, UriKind.Relative));
+            NavigationService.Navigate(new Uri("/FilmDetailsPanorama.xaml?selectedIndex=" + selectedIndex, UriKind.Relative)); //IT WORKS!!! HOORAHHH
 
             /* Reset selected index to -1 (no selection) */
             FilmList.SelectedItem = null;
+
         }
         
         /* Load data for the ViewModel Items */
