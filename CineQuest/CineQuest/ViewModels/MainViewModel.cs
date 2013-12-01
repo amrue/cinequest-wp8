@@ -74,7 +74,7 @@ namespace CineQuest
             /* Connects to cinequest to get the XML file for the films */
             WebClient webclient = new WebClient();
             webclient.DownloadStringCompleted += new DownloadStringCompletedEventHandler(webclient_DownloadStringCompleted);
-            webclient.DownloadStringAsync(new Uri("http://mobile.cinequest.org/mobileCQ.php?type=festival"));
+            webclient.DownloadStringAsync(new Uri("http://payments.cinequest.org/websales/feed.ashx?guid=70d8e056-fa45-4221-9cc7-b6dc88f62c98&showslist=true&"));
         }
 
         private void webclient_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs data)
@@ -86,10 +86,10 @@ namespace CineQuest
 
             Festival festival = null;
             XmlReader reader = null;
-            FestivalParser parser = new FestivalParser();
+            ShowParser parser = new ShowParser();
             try
             {
-                parser = new FestivalParser();
+                parser = new ShowParser();
                 festival = parser.Parse(data.Result);
 
                 FilmItemList list = new FilmItemList(festival);
@@ -99,21 +99,9 @@ namespace CineQuest
                 {
                     /* connect films in ItemList to UI elements */
                     this.Items.Add(new ItemViewModel() {
-                        IVMid = item.id,
-                        IVMtitle = item.title,
-                        IVMdescription = item.description,
-                        IVMtagline = item.tagline,
-                        IVMgenre = item.genre,
-                        IVMimageURL = item.imageURL,
-                        IVMdirector = item.director,
-                        IVMproducer = item.producer,
-                        IVMcinematographer = item.cinematographer,
-                        IVMeditor = item.editor,
-                        IVMcast = item.cast,
-                        IVMcountry = item.country,
-                        IVMlanguage = item.language,
-                        IVMfilminfo = item.filminfo,
-                        IVMshowtimes = item.showtimes
+                        IVMName = item.Name,
+                        IVMShortDescription = item.ShortDescription,
+                        
                     });
                 }
             }

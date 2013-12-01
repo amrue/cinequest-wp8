@@ -31,24 +31,12 @@ namespace CineQuest
         {
             Itemlist = new List<FilmItem>();
 
-            foreach (Film film in festival.films.filmsList)
+            foreach (Show show in festival.arrayOfShows.showList)
             {
                 FilmItem temp = new FilmItem();
-                temp.id = film.id;
-                temp.title = film.title;
-                temp.description = film.description;
-                temp.tagline = film.tagline;
-                temp.genre = film.genre;
-                temp.imageURL = film.imageURL;
-                temp.director = film.director;
-                temp.producer = film.producer;
-                temp.cinematographer = film.cinematographer;
-                temp.editor = film.editor;
-                temp.cast = film.cast;
-                temp.country = film.country;
-                temp.language = film.language;
-                temp.filminfo = film.film_info;
-                temp.showtimes = film.show_times;
+                temp.Name = show.Name;
+                temp.ShortDescription = show.ShortDescription;
+                
                 Itemlist.Add(temp);
             }
 

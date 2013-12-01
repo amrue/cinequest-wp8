@@ -9,25 +9,13 @@
         <!-- each item here has to match instance fields from the ItemViewModel and is only displayed
              on the layout if the layout uses the associated instance field -->
         <local:ItemViewModel
-            IVMid="0000"
-            IVMtitle="Movie #1" 
-            IVMdescription="#1 description"
-            IVMtagline="#1 tagline"
-            IVMgenre="#1 genre"
-            IVMimageURL="#1 imageURL"
-            IVMdirector="#1 director"
-            IVMproducer="#1 producer"
-            IVMcinematographer="#1 cinematographer"
-            IVMeditor="#1 editor"
-            IVMcast="#1 cast"
-            IVMcountry="#1 country"
-            IVMlanguage="#1 language"
-            IVMfilminfo="#1 film info"
-            IVMshowtimes="#1 showtimes" 
+            IVMName="0000"
+            IVMShortDescription="Movie #1" 
+            
             />
-        <local:ItemViewModel IVMtitle="Movie #2" />
-        <local:ItemViewModel IVMtitle="Movie #3" />
-        <local:ItemViewModel IVMtitle="Movie #4" />
+        <local:ItemViewModel IVMShortDescription="Movie #2" />
+        <local:ItemViewModel IVMShortDescription="Movie #3" />
+        <local:ItemViewModel IVMShortDescription="Movie #4" />
     </local:MainViewModel.Items>
     
 </local:MainViewModel>

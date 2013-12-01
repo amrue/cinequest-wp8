@@ -23,203 +23,71 @@ namespace CineQuest
     /**
      * This is the main head of the XML data object
      */
-    [XmlRoot("festival")]
+    [XmlRoot("ATSFeed")]
     public class Festival
     {
-        [XmlElement("program_items")]
-        public ProgramItems programItems  { get; set; }
+        [XmlElement("ArrayOfShows")]
+        public ArrayOfShows arrayOfShows  { get; set; }
 
-        [XmlElement("films")]
-        public Films films { get; set; }
-
-        [XmlElement("schedules")]
-        public Schedules schedules { get; set; }
-
-        [XmlElement("venue_Locations")]
-        public VenueLocations venueLocations { get; set; }
 
         public Festival()
         {
-            films = new Films();
-            schedules = new Schedules();
-            programItems = new ProgramItems();
-            venueLocations = new VenueLocations();
+            arrayOfShows = new ArrayOfShows();
         }
     }
 
     /**
      * List of films to vary size automatically
      */
-    public class Films
+    public class ArrayOfShows
     {
-        [XmlArray("films")]
-        [XmlArrayItem("film", typeof(Film))]
-        public List<Film> filmsList { get; set; }
+        [XmlArray("ArrayOfShows")]
+        [XmlArrayItem("Show", typeof(ArrayOfShows))]
+        public List<Show> showList { get; set; }
 
-        public Films()
+        public ArrayOfShows()
         {
-            filmsList = new List<Film>();
+            showList = new List<Show>();
         }
     }
 
     /**
      * Individual film object, holds all info from XML doc
      */
-    public class Film
+    public class Show
     {
-        [XmlElementAttribute("id")]
-        public string id { get; set; }
 
-        [XmlElement("title")]
-        public string title { get; set; }
+        [XmlElement("ID")]
+        public string ID { get; set; }
 
-        [XmlElement("description")]
-        public string description { get; set; }
+        [XmlElement("ExternalID")]
+        public string ExternalID { get; set; }
 
-        [XmlElement("tagline")]
-        public string tagline { get; set; }
+        [XmlElement("OrgID")]
+        public string OrgID { get; set; }
 
-        [XmlElement("genre")]
-        public string genre { get; set; }
+        [XmlElement("Name")]
+        public string Name { get; set; }
 
-        [XmlElement("imageURL")]
-        public string imageURL { get; set; }
+        [XmlElement("Duration")]
+        public string Duration { get; set; }
 
-        [XmlElement("director")]
-        public string director { get; set; }
+        [XmlElement("ShortDescription")]
+        public string ShortDescription { get; set; }
 
-        [XmlElement("producer")]
-        public string producer { get; set; }
+        [XmlElement("ThumbImage")]
+        public string ThumbImage { get; set; }
 
-        [XmlElement("cinematographer")]
-        public string cinematographer { get; set; }
+        [XmlElement("EventImage")]
+        public string EventImage { get; set; }
 
-        [XmlElement("editor")]
-        public string editor { get; set; }
+        [XmlElement("InfoLink")]
+        public string InfoLink { get; set; }
 
-        [XmlElement("cast")]
-        public string cast { get; set; }
-
-        [XmlElement("country")]
-        public string country { get; set; }
-
-        [XmlElement("language")]
-        public string language { get; set; }
-
-        [XmlElement("film_info")]
-        public string film_info { get; set; }
-
-        public List<String> show_times { get; set; }
+        public List<String> CustomProperty { get; set; }
     }
 
-    /**
-     * List of schedules
-     */
-    public class Schedules
-    {
-        [XmlArray("schedules")]
-        [XmlArrayItem("schedule", typeof(Schedule))]
-        public List<Schedule> schedulesList { get; set; }
 
-        public Schedules()
-        {
-            schedulesList = new List<Schedule>();
-        }
-    }
 
-    /**
-     * Schedule object
-    */
-    public class Schedule
-    {
-        [XmlElementAttribute("id")]
-        public string id { get; set; }
 
-        [XmlElementAttribute("program_item_id")]
-        public string programItemId { get; set; }
-
-        [XmlElementAttribute("start_time")]
-        public string startTime { get; set; }
-
-        [XmlElementAttribute("end_time")]
-        public string endTime { get; set; }
-
-        [XmlElementAttribute("venue")]
-        public string venue { get; set; }
-    }
-
-    /**
-     * List of program items
-     */
-    [XmlRoot(ElementName = "program_items")]
-    public class ProgramItems
-    {
-        [XmlArray("program_items")]
-        [XmlArrayItem("program_item", typeof(ProgramItem))]
-        public List<ProgramItem> programItems { get; set; }
-
-        public ProgramItems()
-        {
-            programItems = new List<ProgramItem>();
-        }
-    }
-
-    /**
-     * ProgramItem holds details
-     */
-    public class ProgramItem
-    {
-        [XmlElementAttribute("id")]
-        public string id { get; set; }
-
-        [XmlElementAttribute("title")]
-        public string title { get; set; }
-
-        [XmlElementAttribute("description")]
-        public string description { get; set; }
-
-        public List<int> films { get; set; }
-
-        public ProgramItem()
-        {
-            films = new List<int>();
-        }
-    }
-
-    /**
-     * Venue locations for program items
-     */
-    [XmlRoot(ElementName = "venu_locations")]
-    public class VenueLocations
-    {
-        [XmlArray("venue_locations")]
-        [XmlArrayItem("venue_location", typeof(VenueLocation))]
-        public List<VenueLocation> venueLocationList { get; set; }
-
-        public VenueLocations()
-        {
-            venueLocationList = new List<VenueLocation>();
-        }
-    }
-
-    /**
-     * Venue location information
-     */
-    public class VenueLocation
-    {
-        [XmlElementAttribute("venue")]
-        public string venue { get; set; }
-
-        [XmlElementAttribute("description")]
-        public string description { get; set; }
-
-        [XmlElementAttribute("location")]
-        public string location { get; set; }
-
-        [XmlElementAttribute("imageURL")]
-        public string imageURL { get; set; }
-
-        [XmlElementAttribute("directionsURL")]
-        public string directionsURL { get; set; }
-    }
 }

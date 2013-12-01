@@ -19,23 +19,10 @@ namespace CineQuest
     /* Fills the filmlist */
     public class FilmItem:IComparable<FilmItem>
     {
-        Films films = new Films();
+        ArrayOfShows arrayOfShows = new ArrayOfShows();
 
-        public String id { get; set; }
-        public String title { get; set; }
-        public String description { get; set; }
-        public String tagline { get; set; }
-        public String genre { get; set; }
-        public String imageURL { get; set; }
-        public String director { get; set; }
-        public String producer { get; set; }
-        public String cinematographer { get; set; }
-        public String editor { get; set; }
-        public String cast { get; set; }
-        public String country { get; set; }
-        public String language { get; set; }
-        public String filminfo { get; set; }
-        public List<String> showtimes { get; set; }
+        public String Name { get; set; }
+        public String ShortDescription { get; set; }
 
         public FilmItem()
         {
@@ -45,7 +32,7 @@ namespace CineQuest
         /* Custom CompareTo so filmitems are sortable by film title */
         public int CompareTo(FilmItem other)
         {
-            return title.CompareTo(other.title);
+            return Name.CompareTo(other.Name);
         }
     }
 }

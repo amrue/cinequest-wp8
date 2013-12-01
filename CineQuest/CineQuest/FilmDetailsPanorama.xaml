@@ -15,16 +15,17 @@
 
     <!--LayoutRoot contains the root grid where all other page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent" d:DataContext="{Binding Items[0]}">
-        <phone:Panorama x:Name="ListTitle"  Title="{Binding IVMtitle}" Margin="9,-7,0,0" >
+        <phone:Panorama x:Name="ListTitle"  Title="{Binding IVMName}" Margin="9,-7,0,0" >
 
             <!--Panorama item one-->
             <phone:PanoramaItem Header="Summary">
                 <ListBox x:Name="MainListBox" Margin="0,0,-12,0" >
                     <StackPanel Margin="0,0,0,17" Width="432" Height="Auto" Orientation="Vertical">
                         <Image />
+                        <TextBlock Text="{Binding IVMName}"  TextWrapping="Wrap" Style="{StaticResource PhoneTextNormalStyle}"/>
                         <TextBlock Text="{Binding IVMtagline}" TextWrapping="Wrap" Style="{StaticResource PhoneTextNormalStyle}"/>
-                        <TextBlock Text="{Binding IVMdescription}" TextWrapping="Wrap" Style="{StaticResource PhoneTextNormalStyle}"/>
-                        <TextBlock Text="&#13;"/>
+                        <TextBlock Text="{Binding IVMShortDescription}" TextWrapping="Wrap" Style="{StaticResource PhoneTextNormalStyle}"/>
+       
                         <TextBlock Text="Director" Style="{StaticResource PhoneTextTitle3Style}" />
                         <TextBlock Text="{Binding IVMdirector}" Style="{StaticResource PhoneTextNormalStyle}" />
                         <TextBlock Text="Producer" Style="{StaticResource PhoneTextTitle3Style}" />
