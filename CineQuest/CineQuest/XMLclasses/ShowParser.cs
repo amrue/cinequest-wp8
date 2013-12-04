@@ -37,7 +37,7 @@ namespace CineQuest.XMLclasses
         /* Instance fields */
         String data;
         Festival festival;
-        Boolean customProp = false;
+
 
         public ShowParser()
         {
@@ -55,6 +55,7 @@ namespace CineQuest.XMLclasses
             {
                 /** Read the shows from the xml **/
                 bool inShow = false;
+                bool customProp = false;
                 /* reads in one show element at a time then adds to festival object */
                 if (reader.Name == "Show")
                 {
@@ -70,17 +71,22 @@ namespace CineQuest.XMLclasses
                         {
                             case XmlNodeType.Element:
                                 tempName = reader.Name;
+
+                                //if see customprop... set flag
+                                if (tempName == "CustomProperties") {
+                                    customProp = true;
+                                }
                                 break;
                             case XmlNodeType.CDATA:
                                 tempValue = reader.Value;
                                 break;
                             /* add name/value pairs to film object */
                             case XmlNodeType.EndElement:
-                                if (tempName == "Name")
+                                if (tempName == "Name" && customProp==false)
                                     temp.Name = (string)tempValue;
                                 else if (tempName == "ShortDescription")
                                     temp.ShortDescription = (string)tempValue; 
-                                tempValue = "";
+                                //tempValue = "";
                                 break;
                         }   //switch
                         /* at end of show element tree, add created show object to festival show list */
