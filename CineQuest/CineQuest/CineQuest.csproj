@@ -119,9 +119,9 @@
     <Compile Include="ViewModels\ItemViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="XMLclasses\Festival.cs" />
-    <Compile Include="XMLclasses\ShowParser.cs" />
     <Compile Include="XMLclasses\FilmItem.cs" />
     <Compile Include="XMLclasses\FilmItemList.cs" />
+    <Compile Include="XMLclasses\XMLParser.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

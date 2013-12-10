@@ -19,7 +19,7 @@ namespace CineQuest
     /* Fills the filmlist */
     public class FilmItem:IComparable<FilmItem>
     {
-        ArrayOfShows arrayOfShows = new ArrayOfShows();
+        Show show = new Show();
 
         public String Name { get; set; }
         public String ShortDescription { get; set; }

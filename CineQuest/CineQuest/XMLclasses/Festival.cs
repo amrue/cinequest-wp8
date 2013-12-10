@@ -17,43 +17,27 @@ using System.Windows.Shapes;
 using System.Xml.Serialization;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
+using System.Collections.ObjectModel;
 
 namespace CineQuest
 {
     /**
      * This is the main head of the XML data object
      */
-    [XmlRoot("ATSFeed")]
+
+    [XmlRoot("ATSFeed", Namespace = "http://www.agiletix.com")]
     public class Festival
     {
-        [XmlElement("ArrayOfShows")]
-        public ArrayOfShows arrayOfShows  { get; set; }
-
-
-        public Festival()
-        {
-            arrayOfShows = new ArrayOfShows();
-        }
-    }
-
-    /**
-     * List of films to vary size automatically
-     */
-    public class ArrayOfShows
-    {
         [XmlArray("ArrayOfShows")]
-        [XmlArrayItem("Show", typeof(ArrayOfShows))]
-        public List<Show> showList { get; set; }
+        [XmlArrayItem("Show")]
+        public ObservableCollection<Show> showList { get; set; }
 
-        public ArrayOfShows()
-        {
-            showList = new List<Show>();
-        }
     }
 
     /**
-     * Individual film object, holds all info from XML doc
+     * Individual show object, holds all info from XML doc
      */
+    [XmlRoot("ATSFeed", Namespace = "http://www.agiletix.com")]
     public class Show
     {
 
@@ -84,9 +68,34 @@ namespace CineQuest
         [XmlElement("InfoLink")]
         public string InfoLink { get; set; }
 
-        public List<String> CustomProperty { get; set; }
+        [XmlArray("CustomProperties")]
+        [XmlArrayItem("CustomProperty")]
+        public ObservableCollection<CustomProperty> customPropertyList { get; set; }
+
+        
     }
 
+    [XmlRoot("ATSFeed", Namespace = "http://www.agiletix.com")]
+    public class CustomProperty
+    {
+
+        [XmlElement("Name")]
+        public string NameCustom { get; set; }
+
+        [XmlElement("Group")]
+        public string Group { get; set; }
+
+        [XmlElement("Sequence")]
+        public string Sequence { get; set; }
+
+        [XmlElement("Hidden")]
+        public string Hidden { get; set; }
+
+        [XmlElement("Value")]
+        public string Value { get; set; }
+
+
+    }
 
 
 

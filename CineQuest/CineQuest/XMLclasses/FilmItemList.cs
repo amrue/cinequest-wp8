@@ -22,16 +22,17 @@ namespace CineQuest
     {
         public List<FilmItem> Itemlist;
         Festival festival;
-        public FilmItemList(Festival f)
+        Show film;
+        public FilmItemList(Show s)
         {
-            festival = f;
+            film = s;
         }
 
         public void populateList()
         {
             Itemlist = new List<FilmItem>();
 
-            foreach (Show show in festival.arrayOfShows.showList)
+            foreach (Show show in festival.showList)
             {
                 FilmItem temp = new FilmItem();
                 temp.Name = show.Name;

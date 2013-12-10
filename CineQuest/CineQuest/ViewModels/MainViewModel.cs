@@ -20,14 +20,19 @@ using System.Collections.ObjectModel;
 using System.Xml;
 using System.Xml.Serialization;
 using System.Xml.Linq;
-using System.IO;
 using CineQuest.XMLclasses;
+using System.Windows.Resources;
+using System.IO;
 
 
 namespace CineQuest
 {
     public class MainViewModel : INotifyPropertyChanged
     {
+
+        XMLParser _parser;
+        StreamReader reader;
+
         public MainViewModel()
         {
             this.Items = new ObservableCollection<ItemViewModel>();
@@ -74,25 +79,27 @@ namespace CineQuest
             /* Connects to cinequest to get the XML file for the films */
             WebClient webclient = new WebClient();
             webclient.DownloadStringCompleted += new DownloadStringCompletedEventHandler(webclient_DownloadStringCompleted);
-            webclient.DownloadStringAsync(new Uri("http://payments.cinequest.org/websales/feed.ashx?guid=70d8e056-fa45-4221-9cc7-b6dc88f62c98&showslist=true&"));
-        }
+            webclient.DownloadStringAsync(new Uri("http://payments.cinequest.org/websales/feed.ashx?guid=70d8e056-fa45-4221-9cc7-b6dc88f62c98&showslist=true&", UriKind.Absolute));
+         }
+            
 
-        private void webclient_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs data)
+        private void webclient_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs webString)
         {
-            if (data.Error != null)
+            if (webString.Error != null)
             {
                 MessageBox.Show("error");
             }
 
-            Festival festival = null;
-            XmlReader reader = null;
-            ShowParser parser = new ShowParser();
+            Show show = null;
+
             try
             {
-                parser = new ShowParser();
-                festival = parser.Parse(data.Result);
+                this._parser = XMLParser.Instance;
+                _parser.DataToParse = webString.Result;
+                _parser.ParseShowData();
+                _parser.ParseCustomPropertyData();
 
-                FilmItemList list = new FilmItemList(festival);
+                FilmItemList list = new FilmItemList(show);
                 list.populateList();
 
                 foreach (FilmItem item in list.Itemlist)
